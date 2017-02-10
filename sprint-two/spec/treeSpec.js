@@ -18,11 +18,13 @@ describe('tree', function() {
 
   it('should return true for a value that the tree contains', function() {
     tree.addChild(5);
+    debugger;
     expect(tree.contains(5)).to.equal(true);
   });
 
   it('should return false for a value that was not added', function() {
     tree.addChild(5);
+    // debugger;
     expect(tree.contains(6)).to.equal(false);
   });
 
@@ -38,6 +40,7 @@ describe('tree', function() {
     tree.children[0].addChild(7);
     tree.children[1].addChild(8);
     expect(tree.contains(7)).to.equal(true);
+    // debugger;
     expect(tree.contains(8)).to.equal(true);
   });
 

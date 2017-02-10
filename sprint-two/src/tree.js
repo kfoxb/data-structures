@@ -12,13 +12,25 @@ var treeMethods = {};
 
 treeMethods.addChild = function(value) {
   var child = {
-    value: value
+    value: value,
+    children: []
   };
+  _.extend(child, treeMethods);
   this.children.push(child);
 };
 
 treeMethods.contains = function(target) {
-
+  var result = false;
+  if (this.value === target) {
+    return true;
+  } else {
+    this.children.forEach(function(child){
+      if (child.contains(target)) {
+        result = true;
+      }
+    })
+  }
+  return result;
 };
 
 
