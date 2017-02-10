@@ -24,6 +24,7 @@ describe('linkedList', function() {
   });
 
   it('should remove the head from the list when removeHead is called', function() {
+    // debugger;
     linkedList.addToTail(4);
     linkedList.addToTail(5);
     expect(linkedList.head.value).to.equal(4);
@@ -41,6 +42,7 @@ describe('linkedList', function() {
     linkedList.addToTail(5);
     expect(linkedList.contains(4)).to.equal(true);
     expect(linkedList.contains(5)).to.equal(true);
+  // debugger;
     expect(linkedList.contains(6)).to.equal(false);
   });
 
